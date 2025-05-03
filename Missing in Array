@@ -1,8 +1,14 @@
-int n = arr.length + 1;
-        int total = n * (n + 1) / 2;
-        int sum = 0;
-        for (int num : arr) {
-            sum += num;
+
+class Solution {
+    int missingNum(int arr[]) {
+ int sum = 0;
+        int correctSum=0;
+        int count=1;
+        for(int x: arr){
+            sum+=x;
+            correctSum+=count++;
         }
-        return total - sum;
+        correctSum+=count;
+        return correctSum-sum;
     }
+}
